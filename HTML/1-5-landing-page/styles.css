@@ -78,11 +78,9 @@ nav {
   gap: 10px;
 }
 
-.container video {
-  display: flex;
-  justify-content: center;
-  height: 350px;
-  width: auto;
+.container grid {
+  width: min(20%);
+  min-width: none;
 }
 
 .container-b img {

@@ -1,0 +1,71 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Open+Sans:ital,wght@0,300;0,400;0,500;1,300;1,400&display=swap");
+
+nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 16px;
+}
+
+.links {
+  display: flex;
+  gap: 16px;
+}
+
+.links--menu {
+  margin-right: auto;
+}
+
+img {
+  min-height: 200px;
+  max-width: 300px;
+}
+
+/* container items */
+
+.container {
+  display: flex;
+  max-width: 400px;
+  max-height: 400px;
+  margin-inline: 20px;
+  border: 10px;
+  border-color: black;
+}
+
+.container-text {
+  display: flex;
+  justify-content: space-between;
+}
+
+.container-main-title {
+  display: flex;
+}
+
+.container-date {
+  display: flex;
+}
+
+.container-main-text {
+  display: flex;
+}
+
+.container-main- {
+  display: flex;
+}
+
+.card {
+  display: flexbox;
+  background-color: blueviolet;
+  width: fit-content;
+  /* min-width: 100px; */
+}
+
+.container-general-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.container-main-img {
+  display: flex;
+}
