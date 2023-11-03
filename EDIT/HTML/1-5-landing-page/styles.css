@@ -1,0 +1,83 @@
+@import url("https://fonts.googleapis.com/css2?family=Jacques+Francois+Shadow&display=swap");
+
+html {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+}
+
+.links {
+  display: flex;
+  gap: 16px;
+}
+
+.links--menu {
+  margin-right: auto;
+}
+
+.btn {
+  background: transparent;
+  padding: 6px 12px;
+}
+
+.btn--black {
+  background: black;
+  color: white;
+}
+
+.btn--blue {
+  background: blue;
+  color: white;
+}
+
+.main {
+  display: flex;
+  top: 64px;
+  flex-direction: column;
+  align-content: center;
+  align-items: center;
+}
+
+.section {
+  display: flex;
+  height: 50%;
+  width: 500px;
+  align-content: center;
+  flex-direction: column;
+}
+
+.main--title {
+  display: flex;
+  height: 50%;
+  width: 500px;
+  align-content: center;
+  flex-direction: column;
+}
+
+.main--buttons {
+  display: flex;
+  height: 50%;
+  width: 500px;
+  align-content: center;
+  flex-direction: column;
+}
+
+h1 {
+  font-size: 50px;
+  width: 100%;
+  margin: auto 0;
+  text-align: center;
+}
+
+h3 {
+  font-size: 14px;
+  width: 100%;
+  margin: auto 0;
+  text-align: center;
+}
