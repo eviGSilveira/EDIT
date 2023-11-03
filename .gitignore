@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Logs
 logs
 *.log
@@ -128,3 +129,6 @@ dist
 .yarn/build-state.yml
 .yarn/install-state.gz
 .pnp.*
+=======
+HTML/0-2-newspaper-article/index.html
+>>>>>>> 12ce0b6 (add HTML folder inside the repository)
