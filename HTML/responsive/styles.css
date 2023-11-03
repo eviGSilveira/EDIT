@@ -1,5 +1,13 @@
 @import url("https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Open+Sans:ital,wght@0,300;0,400;0,500;1,300;1,400&display=swap");
 
+:root {
+  --cols: 4;
+}
+
+body {
+  margin: auto 0;
+}
+
 nav {
   display: flex;
   flex-direction: row;
@@ -55,17 +63,34 @@ img {
 }
 
 .card {
-  display: flexbox;
+  /* display: flexbox;
   background-color: blueviolet;
   width: fit-content;
-  /* min-width: 100px; */
+  min-width: 100px; */
+  width: calc(100% / var (--cols) -16px);
 }
 
 .container-general-text {
   display: flex;
   flex-direction: column;
+  background-color: yellow;
+  border-radius: 20px;
 }
 
 .container-main-img {
   display: flex;
+}
+
+.card-area {
+  display: flex;
+  max-width: 1200px;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  gap: 16px;
+}
+
+@media screen and (max-width: 700px) {
+  :root {
+    --cols: 1;
+  }
 }
