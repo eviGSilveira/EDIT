@@ -1,0 +1,89 @@
+@import "partials/grid";
+
+:root {}
+
+@font-face {
+    src: url('./assets/fonts/WhyteInktrap-Book.woff2');
+        font-family: "arrox";
+}
+
+html {
+    margin: auto 0;
+}
+
+.container-img-text img{
+ max-width: 20%;
+}
+
+.img-container-fluid{
+    max-width: 87.1px;
+    min-height: 90px;
+}
+
+img {
+    min-height: 200px;
+    max-width: 100%;
+}
+
+.container-img{
+min-height: 200px;
+max-width: 100%;
+}
+
+.links {
+    display: flex;
+    gap: 1%;
+    margin: auto 0;
+}
+
+.links--menu {
+    margin-right: auto;
+}
+
+.title-center{
+    text-align: center;
+    justify-content: end;
+}
+
+.container--fluid{
+    margin: auto 0;
+    min-height: 256px;
+    background-color: transparent;
+}
+
+
+$spacers: 8, 16, 24, 32, 64;
+$sides: top, right, bottom, left;
+
+@each $space in $spacers {
+    @each $side in $sides {
+        .m-#{$side}-#{$space} {
+            margin-#{$side}: #{$space + "px"}
+        }
+
+        .p-#{$side}-#{$space} {
+            padding-#{$side}: #{$space + "px"}
+        }
+    }
+}
+
+@each $space in $spacers {
+.gap-#{$space} {
+        gap: #{$space + "px"}
+    }
+}
+
+.m-b-64 {
+    margin: 0 0 64px 0 !important;
+}
+
+h1 {
+    font-family: "arrox";
+    
+}
+
+.container-img-text{
+    display: flex;
+    flex-direction:row;
+align-items: center;
+}

@@ -1,0 +1,6 @@
+@mixin flex($justify: center, $color: red, $position){ // passat valor default para variavel
+    display: flex;
+    justify-content: $justify;
+    color: $color;
+    #{$position}: 0;
+}

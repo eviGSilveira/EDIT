@@ -1,0 +1,23 @@
+@import "mixins";
+
+button {
+    color:red
+}
+
+.form_field{
+    width: 100%;
+    @include flex(left, black, right);
+    &__label{
+        color: red;
+    }
+}
+
+@media screen  {
+    
+}
+@for $i from 1 through 12 {
+    .col-lg-#{$1}{
+        widht: calc(100%/12 *$i - $gap);
+        background : white
+}
+}

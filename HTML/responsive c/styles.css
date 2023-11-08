@@ -1,0 +1,102 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Open+Sans:ital,wght@0,300;0,400;0,500;1,300;1,400&display=swap");
+
+:root {
+  --cols: 4;
+  gap: 16px;
+}
+
+body {
+  margin: auto 0;
+}
+
+/* menu */
+
+nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 16px;
+  border: 0;
+  border-bottom: 1px solid black;
+}
+
+.links {
+  display: flex;
+  gap: 16px;
+  padding: 8px, 16px;
+  margin: 0 auto;
+}
+
+.links--menu {
+  margin-right: auto;
+}
+
+img {
+  min-height: 200px;
+  max-width: 300px;
+}
+
+/* container items */
+
+.container {
+  display: flex;
+  /* max-width: 400px;
+  max-height: 400px; */
+  margin-inline: 20px;
+}
+
+.container-text {
+  display: flex;
+  justify-content: space-between;
+}
+
+.container-main-title {
+  display: flex;
+}
+
+.container-date {
+  display: flex;
+}
+
+.container-main-text {
+  display: flex;
+}
+
+.container-main- {
+  display: flex;
+}
+
+.card {
+  /* display: flexbox;
+  background-color: blueviolet;
+  width: fit-content;
+  min-width: 100px; */
+  width: calc(100% / var(--cols) - 16px);
+}
+
+.container-general-text {
+  display: flex;
+  flex-direction: column;
+  background-color: yellow;
+  border-radius: 20px;
+}
+
+.container-main-img {
+  display: flex;
+}
+
+.card-area {
+  display: flex;
+  max-width: 1200px;
+  flex-direction: column;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  gap: 16px;
+}
+
+@media screen and (max-width: 700px) {
+  :root {
+    --cols: 1;
+  }
+}
