@@ -48,7 +48,19 @@ max-width: 100%;
 .container--fluid{
     margin: auto 0;
     min-height: 256px;
+    background-coflor: transparent;
+}
+
+.container-wrapper {
+    display: flex;
+    justify-content: space-between;
+    margin: auto 0;
+    min-height: 256px;
     background-color: transparent;
+}
+
+.wrappeer-img{
+    margin: 14px;
 }
 
 
@@ -85,5 +97,6 @@ h1 {
 .container-img-text{
     display: flex;
     flex-direction:row;
+    gap
 align-items: center;
 }
