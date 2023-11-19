@@ -11,6 +11,17 @@ img {
     padding: 15px;
 }
 
+nav{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 16px;
+}
+.links{
+        border: 1px solid #000;
+}
+
 .line-clamp{
     line-clamp: 6;
     overflow: hidden;
