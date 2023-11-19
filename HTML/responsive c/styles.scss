@@ -1,0 +1,28 @@
+@import "partials/grid";
+
+img {
+    max-width: 100%;
+    border-radius: 15px;
+}
+
+.container-general-text{
+    border-radius: 15px;
+    box-shadow: 1px 1px 1px grey;
+    padding: 15px;
+}
+
+.line-clamp{
+    line-clamp: 6;
+    overflow: hidden;
+}
+
+.container-text{
+    display: flex;
+    justify-content: space-between;
+}
+
+.container-date{
+    color: grey;
+}
+
+:root {}
