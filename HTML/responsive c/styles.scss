@@ -1,0 +1,36 @@
+@import "partials/grid";
+
+.container-main-img {
+    border-radius: 15px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100px;
+    width: 150px;
+}
+
+.container-card {
+    position: absolute;
+}
+
+.container-general-text{
+    border-radius: 15px;
+    box-shadow: 1px 1px 1px grey;
+    padding: 15px;
+}
+
+.line-clamp{
+    line-clamp: 6;
+    overflow: hidden;
+}
+
+.container-text{
+    display: flex;
+    justify-content: space-between;
+}
+
+.container-date{
+    color: grey;
+}
+
+:root {}
