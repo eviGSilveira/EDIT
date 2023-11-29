@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // anonimus function 
+
+        let name = function () {
+            console.log("Evita Alicia Gomes Silveira")
+        }
+
+        let operation = function (n1, n2) {
+            let addition = n1 + n2
+            return addition
+        }
+
+        name()
+        operation(12, 13)
+
+
+    </script>
+</body>
+
+</html>
