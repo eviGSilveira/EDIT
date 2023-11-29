@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        let price = 30;
+        let discount = 0;
+
+        function applicableDiscount(price, discount) {
+
+            if (discount === 0) {
+                zeroDiscount = price * 2
+                console.log(zeroDiscount)
+            }
+
+            else if (discount < 10) {
+                finalPrice = price + discount
+                console.log(finalPrice)
+            }
+
+            else if (discount < 30) {
+                finalPrice = price - discount
+                console.log(finalPrice)
+
+            } else {
+                console.log('not applicable')
+            }
+
+        }
+
+        applicableDiscount(price, discount)
+
+
+    </script>
+</body>
+
+</html>

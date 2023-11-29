@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        let paises = ['Albânia', 'Bolívia', 'Canadá', 'Dinamarca', 'Etiópia', 'Finlândia', 'Alemanha', 'Hungria', 'Irlanda', 'Japão', 'Quênia']
+
+
+        // ----------- clicle to print array itens ------//
+        
+        for (let i = 0; i <= paises.length - 1; i++) {
+            console.log(paises[i])
+
+        }
+
+        //---- function that returns number of array itens---//
+
+        function positionOfArrayItem(arrayList) {
+
+            let numberOfItensArray = arrayList.length
+
+            return numberOfItensArray
+
+        }
+
+
+        let arrayItens = positionOfArrayItem(paises)
+
+
+        // --------------add itens into array----//
+
+        portugalAdd = paises.unshift('Portugal')
+        spainAdd = paises.push('Spain')
+
+        console.log(paises.splice(paises.length - 3, paises.length - 1))
+        console.log(paises.join('-'))
+
+        //---
+    </script>
+</body>
+
+</html>
