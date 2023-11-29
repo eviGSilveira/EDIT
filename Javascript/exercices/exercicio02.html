@@ -17,17 +17,17 @@
 
             if (discount === 0) {
                 zeroDiscount = price * 2
-                console.log(zeroDiscount)
+                return zeroDiscount
             }
 
             else if (discount < 10) {
                 finalPrice = price + discount
-                console.log(finalPrice)
+                return finalPrice
             }
 
             else if (discount < 30) {
                 finalPrice = price - discount
-                console.log(finalPrice)
+                return finalPrice
 
             } else {
                 console.log('not applicable')
