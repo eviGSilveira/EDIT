@@ -36,14 +36,19 @@
             this.price = price;
         }
 
-        let notebookMac = new Produto('macbook pro 13 inches', 1500);
-        let notebookLinux = new Produto('hp 13 inches', 1000);
-        let notebookWindows = new Produto('lenovo 15 inches', 1100)
+        let notebookMac = new Product('macbook pro 13 inches', 1500);
+        let notebookLinux = new Product('hp 13 inches', 1000);
+        let notebookWindows = new Product('lenovo 15 inches', 1100);
 
 
-        notebookLinux.price = 2.5
-        notebookMac.price = 2.5
-        notebookWindows.price = 2.5
+        notebookLinux.price = 2.5;
+        notebookMac.price = 2.5;
+        notebookWindows.price = 2.5;
+
+
+        console.log('Linux notebook:' + parseInt(notebookLinux.price));
+        console.log('Mac notebook:' + parseInt(notebookMac.price));
+        console.log('Windows notebook:' + parseInt(notebookWindows.price));
 
     </script>
 </body>
