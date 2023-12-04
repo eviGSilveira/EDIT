@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        // anonimus function 
+
+        let name = function () {
+            console.log("Evita Alicia Gomes Silveira")
+        }
+
+        let operation = function (n1, n2) {
+            let addition = n1 + n2;
+            return addition
+        }
+
+        name();
+        operation(12, 13);
+
+        //------- IIFE to print fullName--//
+
+        (function () {
+            console.log('Evita Alicia Gomes Silveira');
+        })();
+
+        //--- IIFE to sum two arguments --//
+
+        console.log(function (n1, n2) {
+            return n1 + n2;
+        })(13, 14);
+
+        //-----divide the number usign closure ---- //
+
+        function functionDivide(n1) {
+            return (function () {
+                return n1 / 2;
+            });
+        };
+
+        console.log(functionDivide(5)())
+
+        //------divide 2 numbers passed as intern function usign closure--- // 
+
+        function functionDivideIntern(n1) {
+            return function secondNumber(n2) {
+                return n1 / n2
+            }
+        }
+
+        console.log(functionDivideIntern(10)(2))
+
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>
