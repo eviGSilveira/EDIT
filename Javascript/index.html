@@ -9,42 +9,31 @@
 
 <body>
     <script>
-        function soma(n1, n2) {
-
-            return n1 + n2
-
-        }
-
-        console.log(soma(1, 7))
 
 
-        function multiplicacao(n1, n2) {
+        let xhr = new XMLHttpRequest()
 
-            return n1 * n2
-        }
-
-        console.log(multiplicacao(1, 7))
-
-
-        function gerarPessoa(nome, idade) {
+        function getAnimesByYear(year) {
+            xhr.open('GET', 'https://api.jikan.moe/v4/top/anime');
+            xhr.responseType = 'json'
+            xhr.send();
 
 
-            obj = new Object(({ nome, idade }))
 
-            return obj
+            xhr.onload = function () {
+                const responseBody = xhr.response;
+                animeData = responseBody.data
 
+                const yearNew = animeData.filter(returnedYear => returnedYear.year === year
+                )
+            };
+
+            yearNew.lenght = 0 ? console.log(`O ano ${year} não tem
+                conteúdos`) : console.log(yearNew)
 
         }
-        // console.log(gerarPessoa("Amanda", 22))
 
-
-        console.log(gerarPessoa("Amadna", 11))
-
-
-
-
-        // console.log(obj = Object.create(gerarPessoa("Amanda", 11))
-
+        getAnimesByYear(2023)
 
 
     </script>
