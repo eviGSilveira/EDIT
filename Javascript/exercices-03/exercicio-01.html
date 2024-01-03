@@ -38,15 +38,27 @@
         let newCompanies = companies.filter(company => company.start >= 1987);
         console.log(newCompanies)
 
-        let sum = companies.reduce(
+        //  reduce of ages //;
+
+        let sum = ages.reduce(
             (accumulator, currentValue) => accumulator + currentValue.start,
             0,
         );
         console.log(sum);
 
+        //  destructuring of category and name //;
+
         const { name: nameCom, category: categoryCom } = companies[0]
         console.log(nameCom + " " + categoryCom)
 
+        //  destructuring of street //;
+        const {
+            address: { street },
+        } = person;
+        console.log(street);
+
+
+        //  filter of companiesData //;
 
         const companiesData = () => {
             let comapanyDataAge = companies.filter(company => company.start >= 1996 && company.start <= 2004);
