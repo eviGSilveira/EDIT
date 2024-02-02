@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        // async function resolvePromiseUSers() {
+        //     try {
+        //         const result
+        //     }
+        // }
+        // resolvePromiseUSers()
+
+
+        //-------convert previous exercise into an async function---//
+        //         try {
+        //             async const sumValues = (n1, n2) => 
+        //             const promisseSum = await n1 + n2
+
+        //             const returnPromise = new Promise((resolve, reject) =>
+
+        // sumValues % 2 == 0 ? resolve('OK') : reject('NOK')
+        // )
+
+
+
+        //             console.log(promisseSum)
+
+
+        //         } catch (e)
+
+
+
+
+
+        //----------create an async function that returns 
+
+        async function values(n1, n2) {
+
+
+            sumValues = n1 + n2
+
+            const promise = new Promise((resolve, reject) => {
+                sumValues % 2 == 0 ? resolve('par') : reject('impar')
+            })
+            return promise
+
+            try {
+                const result = await promise;
+                console.log(result)
+            } catch (error) { console.log(error) }
+        }
+
+        values(1, 2)
+
+        //------------XMLHttpREquest---///
+
+        let xhr = new XMLHttpRequest
+
+        xhr.open('GET', '/endpoint');
+        xhr.send()
+
+
+        //-----------retrieve the data of url provided -----//
+
+        xhr.open('GET', 'https://dog.ceo/api/breeds/list/all')
+        xhr.send()
+
+
+        //-----------retrieve the data of url provided -----//
+        let xhr = new XMLHttpRequest
+
+        xhr.open('GET', 'https://dog.ceo/api/breeds/list/all')
+        xhr.send()
+
+        xhr.onload = () => {
+            console.log("concluido com exito")
+
+        };
+
+        function loadDogs() {
+            request.send()
+        }
+
+        xhr.response()
+        xhr.onreadystatechange()
+
+
+
+
+
+    </script>
+</body>
+
+</html>

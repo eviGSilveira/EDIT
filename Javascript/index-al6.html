@@ -10,56 +10,89 @@
 <body>
     <script>
 
-        // anonimus function 
 
-        let name = function () {
-            console.log("Evita Alicia Gomes Silveira")
+        function Book(author, title) {
+            this.author = author;
+            this.title = title;
         }
 
-        let operation = function (n1, n2) {
-            let addition = n1 + n2;
-            return addition
+
+
+        books = {
+            threeMusketeers: new Book('Alexandre Dumas', 'three Musketeers'),
+            theMaias: new Book('Eça de Queiroz', 'The Maias')
         }
 
-        name();
-        operation(12, 13);
+        Object.entries(books).forEach(entry => {
+            const { key, value } = entry;
+            console.log(key, value);
+        });
 
-        //------- IIFE to print fullName--//
 
-        (function () {
-            console.log('Evita Alicia Gomes Silveira');
-        })();
+        //----- Arrow function -----//
 
-        //--- IIFE to sum two arguments --//
 
-        console.log(function (n1, n2) {
-            return n1 + n2;
-        })(13, 14);
+        function gerarNumer(n1) {
+            return 5
+        }
 
-        //-----divide the number usign closure ---- //
+        gerarNumer()
 
-        function functionDivide(n1) {
-            return (function () {
-                return n1 / 2;
-            });
-        };
+        const gerarNumer = () => numero;
+        //------------------------------//
 
-        console.log(functionDivide(5)())
+        let numero = 1
 
-        //------divide 2 numbers passed as intern function usign closure--- // 
-
-        function functionDivideIntern(n1) {
-            return function secondNumber(n2) {
-                return n1 / n2
+        const gerarNumer = () =>
+            function gerarNumer(n1) {
+                if (n == 9) {
+                    return 5
+                }
+                console.log('abc ${numero}')
             }
-        }
 
-        console.log(functionDivideIntern(10)(2))
-
+        console.log('abc ${numero}')
 
 
+        //--------use default value ----//
+        const multiplicacao = (n1 = 2, n2) => n1 + n2
+
+        //-------ternary -----
+
+        const isEven = (numero) => (numero % 2 == 0 ? "par" : "impar")
+
+        const numberEven = numero % 2 == 0 ? "par" : "impar"
+
+        //------map -----//
+
+        const nomes = ["Antonio", "Maria", "Ana"];
+
+        // nomes.map(nome 
+
+        // { console.log(nome) }
+
+        //----forEach------//
+
+        nomes.forEach((nome) => console.log('Name is' + nome))
+
+        //---- filter ----//
+
+        const notas = [12, 23, 435, 54]
+
+        const notasExcelentes = notas.filter((nota) => nota > 15);
+
+        //-----find-----//
+
+        const newtest = notasExcelentes.find(nota >= 10) => newtest
 
 
+        //---reduce----//
+
+        const produtosEmFalta = ["ovos", "leite", "cacau"]
+
+        const listaDeCompras = produtosEmFalta.reduce((produto, produtos) => `${produtos} ${produto},`, "compras");
+
+        //----destructuring-----//
 
 
     </script>

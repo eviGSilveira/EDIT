@@ -8,32 +8,38 @@
 </head>
 
 <body>
+
     <script>
 
+        let span = document.createElement("span");
+        document.body.append(span);
 
-        let xhr = new XMLHttpRequest()
+        span.classList.add('btn')
 
-        function getAnimesByYear(year) {
-            xhr.open('GET', 'https://api.jikan.moe/v4/top/anime');
-            xhr.responseType = 'json'
-            xhr.send();
+        span.setAttribute("style", "width:330px;float:left;background-color: red;");
+        span.textContent = 'Novo texto';
 
 
 
-            xhr.onload = function () {
-                const responseBody = xhr.response;
-                animeData = responseBody.data
+        span.addEventListener('click', function (event) {
+            span.classList.toggle('active');
+        })
 
-                const yearNew = animeData.filter(returnedYear => returnedYear.year === year
-                )
-            };
 
-            yearNew.lenght = 0 ? console.log(`O ano ${year} não tem
-                conteúdos`) : console.log(yearNew)
 
-        }
+        //-----------------------//
 
-        getAnimesByYear(2023)
+        let button = document.createElement("button");
+        document.body.append(button);
+
+        button.setAttribute("style", "width:50px;float:left;background-color: black;");
+
+        const toogleClass = () => button.classList.toggle("example")
+
+
+        button.addEventListener('mouseover', toogleClass)
+        button.addEventListener('mouseout', toogleClass)
+
 
 
     </script>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+</head>
+
+<body>
+
+    <form id="myform">
+        <input name="name"></input>
+        <input name="email"></input>
+        <input name="mensagem"></input>
+        <button style="background-color: red; width: 50px; height: 50px;">submit</button>
+    </form>
+
+    <script>
+        form = document.querySelector('#myform')
+
+        form.addEventListener('submit', function (event) {
+            event.preventDefault();
+
+            const formData = new FormData(event.target);
+            console.log(formData)
+            console.log(formData.get("name"));
+            console.log(formData.get("email"));
+        })
+
+        //----------------------------------------//----
+        let div1 = document.createElement("div");
+        let ul = document.createElement("ul")
+        document.body.append(div1);
+
+        let ul1 = div1.appendChild(ul)
+
+        ul1.insertAdjacentHTML('afterbegin', '<li>exemplo 01</li>');
+        let secondli = ul1.insertAdjacentHTML('beforeend', '<li>exemplo 02</li>');
+
+        let p = div1.insertAdjacentHTML('beforeend', '<p>isto é uma div</p>')
+
+        div1.removeChild(p)
+
+        //----------------------------------------------//
+
+
+    </script>
+</body>
+
+</html>

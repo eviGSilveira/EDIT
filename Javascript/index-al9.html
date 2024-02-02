@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+
+        // let xhr = new XMLHttpRequest()
+
+        // async function animeByYear(year) {
+        //     const promise = new Promise((resolve, reject) => {
+
+        //         xhr.open('GET', 'https://api.jikan.moe/v4/top/anime');
+        //         xhr.responseType = 'json'
+
+        //         xhr.onload = () => {
+        //             const responseBody = xhr.response;
+        //             animeData = responseBody.data
+        //             const yearNew = animeData.filter(returnedYear => returnedYear.year === year)
+        //             resolve(yearNew)
+        //         }
+
+        //         xhr.onerror = () =>
+        //             reject(`O ano ${year} não tem
+        //         conteúdos`);
+
+        //         xhr.send();
+
+        //     })
+
+        //     const resultPromise = await promise;
+
+        //     resultPromise == 0 ? console.log(`O ano ${year} não tem
+        //         conteúdos`) : console.log(resultPromise)
+
+
+        // }
+
+        // console.log(animeByYear(2003))
+
+
+
+        //----------------- to fetch method -------------------//
+
+
+        async function animeByYear(year) {
+            const promise = new Promise((resolve, reject) => {
+
+                const response = fetch('https://api.jikan.moe/v4/top/anime');
+
+                    .then(responseData) => responseData.json()
+
+            response.onload = () => {
+                animeData = responseData.data
+                console.log(animeData)
+                const yearNew = animeData.filter(returnedYear => returnedYear.year === year)
+                resolve(yearNew)
+            }
+
+            response.onerror = () =>
+                reject(`O ano ${year} não tem
+                conteúdos`);
+
+
+        })
+
+        const resultPromise = await promise;
+
+        resultPromise == 0 ? console.log(`O ano ${year} não tem
+                conteúdos`) : console.log(resultPromise)
+
+
+        }
+
+        console.log(animeByYear(2003))
+
+
+
+
+    </script>
+</body>
+
+</html>

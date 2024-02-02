@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exercicio Nosso React</title>
+</head>
+
+<body>
+    <div id="root" style="background-color: brown; width: 100px;"></div>
+
+    <script>
+        /* 
+Utilizar o objeto reactElement para criar um link na nossa página
+
+Criar uma função de render que recebe dois parametros 
+* element - elemento a ser renderizado
+* container - container onde o componenete deve ser renderizado
+
+Esta função deve encarregar-se de gerar o elemento apartir do objeto reactElement na pagina e apresenta-lo!
+
+Para o segundo parametro necessitamos de selecionar o elemento com o id "root" (#root)
+que deve estar presente no body da nossa página
+
+Boa sorte
+*/
+
+
+
+        const reactElement = {
+            type: 'a',
+            props: {
+                href: 'https://react.dev//',
+            },
+            children: 'Vamos começar com o React',
+        };
+
+        const render = (reactElement, containerClass) => {
+            const tests1 = document.getElementById("root")
+            console.log(tests1)
+
+            const link = document.createElement(tests1.type)
+            link.href = tests1.props.href
+            link.innerText = tests1.children
+
+
+        }
+
+    </script>
+</body>
+
+</html>

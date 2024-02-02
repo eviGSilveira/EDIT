@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+</head>
+
+<body>
+    <button>Button 1</button>
+    <button>Button 2</button>
+
+    <script>
+
+        // btn = document.createElement("button")
+        // document.body.append(btn)
+        // var atributo = document.createAttribute('atributo');
+        // atributo.value = 'teste';
+        // btn.setAttributeNode(atributo);
+
+        // btn = document.createElement("button")
+        // document.body.append(btn)
+
+        // document.createAttribute("abc")
+
+        const tests = document.getElementsByTagName("button")
+
+        tests[0].addEventListener("mouseover", () => console.log("mouseover"))
+        tests[1].addEventListener("mouseover", () => console.log("mouseover"))
+
+        setTimeout(() => buttons[0].setAttribute("id", "exemplo"), 1000);
+
+        //--------------------------//
+
+        const exemplo = document.getElementById("button")
+
+        exemplo.addEventListener("click", (event) => {
+            console.log("target:", event.target, "currentTarget", event.currentTarget)
+        })
+
+        exemplo.addEventListener("keypress", (event) => {
+            console.log("key:", event.key)
+        })
+
+        const captureEvent = (event) => {
+            console.log(event);
+
+            if (event.type == "click") {
+                event.target.setAttribute('class', 'clicked')
+            } else {
+                event.target.setAttribute('class', 'hover')
+            }
+        }
+
+        const exemplo = document.getElementsByTagName("button");
+
+        exemplo[0].addEventListener("click", captureEvent)
+        exemplo[0].addEventListener("mouseover", captureEvent)
+
+
+
+
+    </script>
+</body>
+
+</html>
